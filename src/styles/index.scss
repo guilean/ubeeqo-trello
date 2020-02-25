@@ -1,16 +1,20 @@
 @import "./base.scss";
-@import "../components/boards/Board/index.scss";
+@import "../components/common/Card/index.scss";
+@import "../components/common/Header/index.scss";
+@import "../components/boards/BoardList/index.scss";
+@import "../components/boards/BoardCard/index.scss";
+@import "../components/boards/BoardCreator/index.scss";
 
 body {
   margin: 0;
-  font-family: "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
-    "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: "Montserrat", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+    "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: 14px;
   color: black;
 }
 
-.underline {
-  @include underline();
+.textfield {
+  @include textfield();
 }

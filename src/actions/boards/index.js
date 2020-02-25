@@ -1,11 +1,10 @@
 import { CREATE_BOARD_SUCCESS, DELETE_BOARD_SUCCESS } from "../types";
-
-let id = 0;
+import { generateId } from "../../utils";
 
 export const createBoardSuccess = name => ({
   type: CREATE_BOARD_SUCCESS,
   payload: {
-    id: id++,
+    id: generateId(),
     name
   }
 });

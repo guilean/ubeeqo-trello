@@ -1,11 +1,35 @@
 $medium: 767px;
-
-@mixin underline {
-  text-decoration: underline;
-}
+$large: 991px;
 
 @mixin ellipsis {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+@mixin textfield {
+  background: none;
+  border: none;
+  border-bottom: 1px solid white;
+  outline: none;
+  width: 100%;
+  color: white;
+}
+
+@mixin small {
+  @media (min-width: 0) and (max-width: $medium) {
+    @content;
+  }
+}
+
+@mixin medium {
+  @media (min-width: $medium + 1) and (max-width: $large) {
+    @content;
+  }
+}
+
+@mixin large {
+  @media (min-width: $large + 1) {
+    @content;
+  }
 }
