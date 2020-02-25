@@ -4,10 +4,16 @@ import Board from "../Board";
 function BoardList({ data, deleteBoard }) {
   const hasData = data.length > 0;
   if (hasData) {
-    return data.map((board, i) => {
-      const { name, id } = board;
-      return <Board key={i} deleteBoard={deleteBoard} id={id} name={name} />;
-    });
+    return (
+      <ul>
+        {data.map((board, i) => {
+          const { name, id } = board;
+          return (
+            <Board key={i} deleteBoard={deleteBoard} id={id} name={name} />
+          );
+        })}
+      </ul>
+    );
   } else {
     return <span>empty case</span>;
   }

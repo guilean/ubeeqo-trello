@@ -18,9 +18,11 @@ function Boards() {
 
   return (
     <main>
-      <h1>Ubeeqo Trello</h1>
-      <BoardCreator createBoard={createBoard} />
-      <BoardList deleteBoard={deleteBoard} data={boards} />
+      <div className="container">
+        <h1>Ubeeqo Trello</h1>
+        <BoardCreator createBoard={createBoard} />
+        <BoardList deleteBoard={deleteBoard} data={boards} />
+      </div>
     </main>
   );
 }

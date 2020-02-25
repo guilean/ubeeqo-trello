@@ -1,0 +1,16 @@
+@import "./base.scss";
+@import "../components/boards/Board/index.scss";
+
+body {
+  margin: 0;
+  font-family: "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 14px;
+  color: black;
+}
+
+.underline {
+  @include underline();
+}
