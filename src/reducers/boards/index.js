@@ -1,6 +1,8 @@
 import {
   CREATE_BOARD_SUCCESS,
-  DELETE_BOARD_SUCCESS
+  DELETE_BOARD_SUCCESS,
+  CREATE_COLUMN_SUCCESS,
+  DELETE_COLUMN_SUCCESS
 } from "../../actions/types";
 
 const boards = (state = {}, action) => {
@@ -9,13 +11,38 @@ const boards = (state = {}, action) => {
       return {
         ...state,
         [action.payload.id]: {
-          name: action.payload.name
+          name: action.payload.name,
+          columns: []
         }
       };
+
     case DELETE_BOARD_SUCCESS:
       let stateCloned = Object.assign({}, state);
       delete stateCloned[action.payload.id];
       return stateCloned;
+
+    case CREATE_COLUMN_SUCCESS:
+      return {
+        ...state,
+        [action.payload.boardId]: {
+          ...state[action.payload.boardId],
+          columns: state[action.payload.boardId].columns.concat(
+            action.payload.columnName
+          )
+        }
+      };
+
+    case DELETE_COLUMN_SUCCESS:
+      return {
+        ...state,
+        [action.payload.boardId]: {
+          ...state[action.payload.boardId],
+          columns: state[action.payload.boardId].columns.filter(
+            (item, index) => index !== action.payload.columnIndex
+          )
+        }
+      };
+
     default:
       return state;
   }

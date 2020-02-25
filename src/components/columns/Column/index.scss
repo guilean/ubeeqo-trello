@@ -1,0 +1,16 @@
+.board-column {
+  display: inline-block;
+  .board-column-options {
+    .board-column-option-delete {
+      position: absolute;
+      right: 12px;
+      bottom: 12px;
+      color: #fff;
+      cursor: pointer;
+      &:hover {
+        color: #772211;
+        transition: color 0.5s ease-out;
+      }
+    }
+  }
+}

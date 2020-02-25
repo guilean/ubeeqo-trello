@@ -26,6 +26,10 @@
   background: linear-gradient(135deg, #ff6d5f 0%, #b83124 100%);
 }
 
+.large {
+  width: 260px;
+}
+
 @include small() {
   .card {
     width: 140px;

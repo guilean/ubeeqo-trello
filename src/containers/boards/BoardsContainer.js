@@ -2,6 +2,7 @@ import React, { useCallback } from "react";
 import { createBoardAction, deleteBoardAction } from "../../actions/boards";
 import { useSelector, useDispatch } from "react-redux";
 import BoardList from "../../components/boards/BoardList";
+import BoardCreator from "../../components/boards/BoardCreator";
 
 function BoardsContainer() {
   const boards = useSelector(state => state.boards);
@@ -22,11 +23,8 @@ function BoardsContainer() {
   return (
     <main>
       <div className="container">
-        <BoardList
-          createBoard={createBoard}
-          deleteBoard={deleteBoard}
-          data={boards}
-        />
+        <BoardCreator createBoard={createBoard} />
+        <BoardList deleteBoard={deleteBoard} data={boards} />
       </div>
     </main>
   );
