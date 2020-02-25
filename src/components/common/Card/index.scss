@@ -1,0 +1,36 @@
+@import "../../../styles/base.scss";
+
+.card {
+  position: relative;
+  display: inline-block;
+  height: 80px;
+  width: 160px;
+  border: none;
+  padding: 12px;
+  border-radius: 4px;
+  margin: 8px;
+  vertical-align: top;
+  .card-title {
+    text-align: left;
+    margin-bottom: 0;
+    @include ellipsis();
+    font-weight: 600;
+    color: white;
+    width: 140px;
+  }
+}
+.regular {
+  background: #ff6d5f;
+}
+.highlight {
+  background: linear-gradient(135deg, #ff6d5f 0%, #b83124 100%);
+}
+
+@include small() {
+  .card {
+    width: 140px;
+    .card-title {
+      font-size: 12px;
+    }
+  }
+}

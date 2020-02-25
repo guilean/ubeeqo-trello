@@ -1,16 +1,11 @@
 import React from "react";
-import { FaTrash } from "react-icons/fa";
-function Board({ name, id, deleteBoard }) {
-  return (
-    <li className="board">
-      <label className="board-name">{name}</label>
-      <div className="board-options">
-        <span onClick={() => deleteBoard(id)}>
-          <FaTrash className="board-option-delete" />
-        </span>
-      </div>
-    </li>
-  );
+import { useSelector } from "react-redux";
+import { useParams } from "react-router-dom";
+
+function Board() {
+  let { boardId } = useParams();
+  const board = useSelector(state => state.boards[boardId]);
+  return <span>Soy el board {board.name}</span>;
 }
 
 export default Board;

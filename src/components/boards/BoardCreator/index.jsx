@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import Card from "../../common/Card";
+import { FaPlus } from "react-icons/fa";
 
 function BoardCreator({ createBoard }) {
   const [name, setName] = useState("");
@@ -8,19 +10,37 @@ function BoardCreator({ createBoard }) {
   };
 
   const onSubmitCreateBoard = e => {
+    if (name === "") {
+      return;
+    }
     createBoard(name);
     setName("");
     e.preventDefault();
   };
 
   return (
-    <form onSubmit={onSubmitCreateBoard}>
-      <label>
-        Name:
-        <input type="text" value={name} onChange={onChangeInput} />
-      </label>
-      <input disabled={name === ""} type="submit" value="Create Board" />
-    </form>
+    <div id="board-creator">
+      <Card
+        highlight={true}
+        title={
+          <span>
+            Add new board
+            <FaPlus onClick={onSubmitCreateBoard} className="plus-icon" />
+          </span>
+        }
+      >
+        <form onSubmit={onSubmitCreateBoard}>
+          <div>
+            <input
+              className="textfield"
+              type="text"
+              value={name}
+              onChange={onChangeInput}
+            />
+          </div>
+        </form>
+      </Card>
+    </div>
   );
 }
 

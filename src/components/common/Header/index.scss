@@ -1,0 +1,17 @@
+@import "../../../styles/base.scss";
+
+header {
+  height: 65px;
+  .logo-container {
+    text-align: center;
+    background: #ff6d5f;
+    width: 100%;
+    margin: 0 auto;
+    height: 65px;
+    .logo {
+      width: 160px;
+      padding-top: 12px;
+      filter: invert(1);
+    }
+  }
+}

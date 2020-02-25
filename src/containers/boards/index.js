@@ -2,9 +2,8 @@ import React, { useCallback } from "react";
 import { createBoardAction, deleteBoardAction } from "../../actions/boards";
 import { useSelector, useDispatch } from "react-redux";
 import BoardList from "../../components/boards/BoardList";
-import BoardCreator from "../../components/boards/BoardCreator";
 
-function Boards() {
+function BoardsContainer() {
   const boards = useSelector(state => state.boards);
   const dispatch = useDispatch();
 
@@ -12,19 +11,25 @@ function Boards() {
     dispatch
   ]);
 
-  const deleteBoard = useCallback(name => dispatch(deleteBoardAction(name)), [
-    dispatch
-  ]);
+  const deleteBoard = useCallback(
+    (event, id) => {
+      event.preventDefault();
+      dispatch(deleteBoardAction(id));
+    },
+    [dispatch]
+  );
 
   return (
     <main>
       <div className="container">
-        <h1>Ubeeqo Trello</h1>
-        <BoardCreator createBoard={createBoard} />
-        <BoardList deleteBoard={deleteBoard} data={boards} />
+        <BoardList
+          createBoard={createBoard}
+          deleteBoard={deleteBoard}
+          data={boards}
+        />
       </div>
     </main>
   );
 }
 
-export default Boards;
+export default BoardsContainer;

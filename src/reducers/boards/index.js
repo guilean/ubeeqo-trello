@@ -3,20 +3,22 @@ import {
   DELETE_BOARD_SUCCESS
 } from "../../actions/types";
 
-const boards = (state = [], action) => {
+const boards = (state = {}, action) => {
   switch (action.type) {
     case CREATE_BOARD_SUCCESS:
-      return [
+      return {
         ...state,
-        {
-          name: action.payload.name,
-          id: action.payload.id
+        [action.payload.id]: {
+          name: action.payload.name
         }
-      ];
+      };
     case DELETE_BOARD_SUCCESS:
-      return state.filter(board => board.id !== action.payload.id);
+      let stateCloned = Object.assign({}, state);
+      delete stateCloned[action.payload.id];
+      return stateCloned;
     default:
       return state;
   }
 };
+
 export default boards;
