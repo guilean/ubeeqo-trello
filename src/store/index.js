@@ -1,5 +1,5 @@
 import { createStore, applyMiddleware } from "redux";
-import defaultReducer from "../reducers";
+import rootReducer from "../reducers";
 import thunkMiddleware from "redux-thunk";
 
 const persistedState = localStorage.getItem("reduxState")
@@ -7,7 +7,7 @@ const persistedState = localStorage.getItem("reduxState")
   : {};
 
 const store = createStore(
-  defaultReducer,
+  rootReducer,
   persistedState,
   applyMiddleware(thunkMiddleware)
 );
