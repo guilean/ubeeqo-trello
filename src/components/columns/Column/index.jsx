@@ -1,17 +1,21 @@
 import React from "react";
-import Card from "../../common/Card";
 import { FaTrash } from "react-icons/fa";
+import TaskContainer from "../../../containers/tasks/TasksContainer";
 
 function Column({ name, index, deleteColumn }) {
   return (
     <li className="board-column">
-      <Card size={"large"} title={name}>
-        <div className="board-column-options">
+      <div className="column-header">
+        <span className="column-name">{name}</span>
+        <div className="column-options">
           <span onClick={e => deleteColumn(e, index)}>
-            <FaTrash className="board-column-option-delete" />
+            <FaTrash className="column-option-delete" />
           </span>
         </div>
-      </Card>
+      </div>
+      <div className="column-body">
+        <TaskContainer columnIndex={index} />
+      </div>
     </li>
   );
 }

@@ -4,6 +4,7 @@ import { isEmpty } from "../../../utils";
 import EmptyListAsset from "../../../assets/empty-list.png";
 
 function BoardList({ data, deleteBoard }) {
+  debugger;
   const hasData = !isEmpty(data);
   return hasData ? (
     <ul id="board-list">

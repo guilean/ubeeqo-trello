@@ -28,6 +28,7 @@
 
 .large {
   width: 260px;
+  min-height: 100px;
 }
 
 @include small() {

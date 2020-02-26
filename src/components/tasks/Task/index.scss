@@ -1,0 +1,13 @@
+.task {
+  border-radius: 4px;
+  padding: 8px;
+  margin: 5px 0;
+  border: 1px solid #c1281a;
+  background: white;
+  position: relative;
+  .task-options {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+  }
+}

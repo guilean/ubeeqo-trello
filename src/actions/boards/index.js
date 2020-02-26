@@ -1,29 +1,29 @@
 import { CREATE_BOARD_SUCCESS, DELETE_BOARD_SUCCESS } from "../types";
 import { generateId } from "../../utils";
 
-export const createBoardSuccess = name => ({
+const createBoardSuccess = ({ boardName }) => ({
   type: CREATE_BOARD_SUCCESS,
   payload: {
-    id: generateId(),
-    name
+    boardId: generateId(),
+    boardName
   }
 });
 
-export const deleteBoardSuccess = id => ({
+const deleteBoardSuccess = ({ boardId }) => ({
   type: DELETE_BOARD_SUCCESS,
   payload: {
-    id
+    boardId
   }
 });
 
-export function createBoardAction(boardName) {
+export function createBoardAction({ boardName }) {
   return dispatch => {
-    dispatch(createBoardSuccess(boardName));
+    dispatch(createBoardSuccess({ boardName }));
   };
 }
 
-export function deleteBoardAction(boardName) {
+export function deleteBoardAction({ boardId }) {
   return dispatch => {
-    dispatch(deleteBoardSuccess(boardName));
+    dispatch(deleteBoardSuccess({ boardId }));
   };
 }

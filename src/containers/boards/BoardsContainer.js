@@ -5,17 +5,20 @@ import BoardList from "../../components/boards/BoardList";
 import BoardCreator from "../../components/boards/BoardCreator";
 
 function BoardsContainer() {
-  const boards = useSelector(state => state.boards);
+  const boards = useSelector(state => {
+    return state.boards;
+  });
   const dispatch = useDispatch();
 
-  const createBoard = useCallback(name => dispatch(createBoardAction(name)), [
-    dispatch
-  ]);
+  const createBoard = useCallback(
+    boardName => dispatch(createBoardAction({ boardName })),
+    [dispatch]
+  );
 
   const deleteBoard = useCallback(
-    (event, id) => {
+    (event, boardId) => {
       event.preventDefault();
-      dispatch(deleteBoardAction(id));
+      dispatch(deleteBoardAction({ boardId }));
     },
     [dispatch]
   );

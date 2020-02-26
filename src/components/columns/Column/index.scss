@@ -1,16 +1,28 @@
 .board-column {
   display: inline-block;
-  .board-column-options {
-    .board-column-option-delete {
-      position: absolute;
-      right: 12px;
-      bottom: 12px;
-      color: #fff;
-      cursor: pointer;
-      &:hover {
-        color: #772211;
-        transition: color 0.5s ease-out;
+  background: #ff6d5f;
+  border-radius: 4px;
+  padding: 12px;
+  margin: 0 5px;
+  width: 250px;
+  .column-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .column-options {
+      display: inline-block;
+      .column-option-delete {
+        color: #fff;
+        cursor: pointer;
+        &:hover {
+          color: #772211;
+          transition: color 0.5s ease-out;
+        }
       }
     }
+  }
+  .column-body {
+    max-height: 400px;
+    overflow-y: auto;
   }
 }

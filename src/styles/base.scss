@@ -14,6 +14,16 @@ $large: 991px;
   outline: none;
   width: 100%;
   color: white;
+  &::placeholder {
+    color: #eaeaea;
+    opacity: 1; /* Firefox */
+  }
+  :-ms-input-placeholder {
+    color: #eaeaea;
+  }
+  ::-ms-input-placeholder {
+    color: #eaeaea;
+  }
 }
 
 @mixin small {
