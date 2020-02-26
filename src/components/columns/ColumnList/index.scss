@@ -2,7 +2,6 @@
 #column-empty-list {
   padding-top: 20px;
 }
-
 #column-list {
   padding-left: 0;
   list-style: none;
@@ -11,14 +10,11 @@
   white-space: nowrap;
   height: auto;
 }
-
 #column-empty-list {
   padding: 40px 0 20px 0;
   text-align: center;
-  h3 {
-    font-weight: 300;
-  }
   img {
-    width: 200px;
+    width: 300px;
+    filter: grayscale(1);
   }
 }

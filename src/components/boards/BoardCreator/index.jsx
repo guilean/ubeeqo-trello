@@ -20,26 +20,16 @@ function BoardCreator({ createBoard }) {
 
   return (
     <div id="board-creator">
-      <Card
-        highlight={true}
-        title={
-          <span>
-            Add new board
-            <FaPlus onClick={onSubmitCreateBoard} className="plus-icon" />
-          </span>
-        }
-      >
-        <form onSubmit={onSubmitCreateBoard}>
-          <div>
-            <input
-              className="textfield"
-              type="text"
-              value={name}
-              onChange={onChangeInput}
-            />
-          </div>
-        </form>
-      </Card>
+      <form onSubmit={onSubmitCreateBoard}>
+        <input
+          autoFocus
+          placeholder={"Add a new board ✏️"}
+          className="textfield"
+          type="text"
+          value={name}
+          onChange={onChangeInput}
+        />
+      </form>
     </div>
   );
 }

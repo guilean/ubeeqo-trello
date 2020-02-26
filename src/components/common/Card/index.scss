@@ -11,19 +11,21 @@
   margin: 8px;
   vertical-align: top;
   .card-title {
+    display: block;
     text-align: left;
     margin-bottom: 0;
+    font-size: 16px;
     @include ellipsis();
     font-weight: 600;
     color: white;
-    width: 140px;
+    width: -webkit-fill-available;
   }
 }
 .regular {
-  background: #ff6d5f;
+  background-color: #00c4d1b8;
 }
 .highlight {
-  background: linear-gradient(135deg, #ff6d5f 0%, #b83124 100%);
+  background-color: $orange-ubeello;
 }
 
 .large {

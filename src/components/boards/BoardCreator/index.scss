@@ -8,4 +8,20 @@
     right: 12px;
     cursor: pointer;
   }
+  .textfield {
+    font-size: 32px;
+    color: #00c4d1;
+    border-bottom: 1px solid #a6f2f7;
+    font-weight: 600;
+    &::placeholder {
+      color: #00c4d169;
+      opacity: 1;
+    }
+    :-ms-input-placeholder {
+      color: #00c4d169;
+    }
+    ::-ms-input-placeholder {
+      color: #00c4d169;
+    }
+  }
 }

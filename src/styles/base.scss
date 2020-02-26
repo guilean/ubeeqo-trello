@@ -1,6 +1,9 @@
 $medium: 767px;
 $large: 991px;
 
+$blue-ubeello: #00c4d1;
+$orange-ubeello: #fe7e64;
+
 @mixin ellipsis {
   white-space: nowrap;
   overflow: hidden;
@@ -16,7 +19,7 @@ $large: 991px;
   color: white;
   &::placeholder {
     color: #eaeaea;
-    opacity: 1; /* Firefox */
+    opacity: 1;
   }
   :-ms-input-placeholder {
     color: #eaeaea;

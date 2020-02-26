@@ -77,7 +77,6 @@ function ColumnList({ data, deleteColumn, reorderColumns }) {
     </DragDropContext>
   ) : (
     <div id="column-empty-list">
-      <h3>Help me by adding a new column!</h3>
       <img src={EmptyListV2} alt="Empty list asset" />
     </div>
   );
