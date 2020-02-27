@@ -1,13 +1,7 @@
-#board-creator {
+#creator {
   display: flex;
   justify-content: center;
   padding-top: 40px;
-  .plus-icon {
-    position: absolute;
-    top: 12px;
-    right: 12px;
-    cursor: pointer;
-  }
   .textfield {
     font-size: 32px;
     color: #00c4d1;
