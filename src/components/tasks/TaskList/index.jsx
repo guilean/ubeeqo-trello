@@ -4,9 +4,11 @@ import Task from "../Task";
 function TaskList({ data, deleteTask }) {
   return (
     data.length > 0 &&
-    data.map((task, i) => (
-      <Task key={i} index={i} name={task.name} deleteTask={deleteTask} />
-    ))
+    data
+      .map((task, i) => (
+        <Task key={i} index={i} name={task.name} deleteTask={deleteTask} />
+      ))
+      .reverse()
   );
 }
 

@@ -1,13 +1,30 @@
+@import "../../../styles/base.scss";
+
 .task {
   border-radius: 4px;
   padding: 8px;
   margin: 5px 0;
-  border: 1px solid #c1281a;
-  background: white;
+  border: 1px solid #005258;
+  background: #005258d9;
+  color: white;
   position: relative;
+  cursor: inherit;
+  .task-name {
+    width: calc(100% - 14px);
+    display: inline-block;
+    white-space: pre-line;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
   .task-options {
     position: absolute;
     top: 8px;
     right: 8px;
+    cursor: pointer;
+    .task-option-delete {
+      &:hover {
+        color: #062729;
+      }
+    }
   }
 }

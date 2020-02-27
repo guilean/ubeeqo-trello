@@ -1,11 +1,26 @@
 .task-creator {
   display: flex;
   align-items: center;
-  margin-top: 20px;
+  margin: 20px 0;
+  .textfield {
+    border-bottom: 1px solid #005258;
+    color: #005258;
+    &::placeholder {
+      color: #005c63;
+      opacity: 1;
+    }
+    :-ms-input-placeholder {
+      color: #005c63;
+    }
+    ::-ms-input-placeholder {
+      color: #005c63;
+    }
+  }
   form {
     width: 100%;
   }
   .plus-icon {
-    color: #fff;
+    cursor: pointer;
+    color: #005258;
   }
 }

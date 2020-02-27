@@ -27,12 +27,12 @@ function TasksContainer({ columnIndex }) {
 
   return (
     <>
+      <TaskCreator createTask={createTask} />
       <TaskList
         columnIndex={columnIndex}
         deleteTask={deleteTask}
         data={tasks}
       />
-      <TaskCreator createTask={createTask} />
     </>
   );
 }

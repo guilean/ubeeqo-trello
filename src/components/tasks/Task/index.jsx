@@ -4,7 +4,7 @@ import { FaTrash } from "react-icons/fa";
 function Task({ name, index, deleteTask }) {
   return (
     <div className="task">
-      {name}
+      <span className="task-name">{name}</span>
       <div className="task-options">
         <span onClick={e => deleteTask(e, index)}>
           <FaTrash className="task-option-delete" />
