@@ -35,7 +35,7 @@ function ColumnsContainer() {
 
   return (
     <main>
-      <div className="container">
+      <div id="columns-container" className="container">
         <ColumnCreator createColumn={createColumn} />
         <ColumnList
           reorderColumn={reorderColumn}

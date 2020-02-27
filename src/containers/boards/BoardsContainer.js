@@ -25,7 +25,7 @@ function BoardsContainer() {
 
   return (
     <main>
-      <div className="container">
+      <div id="boards-container" className="container">
         <BoardCreator createBoard={createBoard} />
         <BoardList deleteBoard={deleteBoard} data={boards} />
       </div>

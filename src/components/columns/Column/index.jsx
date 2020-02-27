@@ -4,7 +4,7 @@ import TaskContainer from "../../../containers/tasks/TasksContainer";
 
 function Column({ name, index, deleteColumn }) {
   return (
-    <li className="board-column">
+    <div className="board-column">
       <div className="column-header">
         <span className="column-name">{name}</span>
         <div className="column-options">
@@ -16,7 +16,7 @@ function Column({ name, index, deleteColumn }) {
       <div className="column-body">
         <TaskContainer columnIndex={index} />
       </div>
-    </li>
+    </div>
   );
 }
 
