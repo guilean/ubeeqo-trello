@@ -1,0 +1,16 @@
+.empty-list {
+  padding: 50px 0;
+  text-align: center;
+  img {
+    width: 300px;
+    filter: grayscale(1);
+  }
+}
+
+@include small() {
+  .empty-list {
+    img {
+      width: 250px;
+    }
+  }
+}

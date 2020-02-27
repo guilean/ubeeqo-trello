@@ -2,6 +2,7 @@ import React from "react";
 import BoardCard from "../BoardCard";
 import { isEmpty } from "../../../utils";
 import EmptyListAsset from "../../../assets/empty-list.png";
+import EmptyList from "../../common/EmptyList";
 
 function BoardList({ data, deleteBoard }) {
   const hasData = !isEmpty(data);
@@ -18,9 +19,7 @@ function BoardList({ data, deleteBoard }) {
         .reverse()}
     </ul>
   ) : (
-    <div id="board-empty-list">
-      <img src={EmptyListAsset} alt="Empty list asset" />
-    </div>
+    <EmptyList asset={EmptyListAsset} />
   );
 }
 

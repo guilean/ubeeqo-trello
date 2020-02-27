@@ -1,19 +1,10 @@
-#column-list,
-#column-empty-list {
-  padding: 50px 0;
-}
+@import "../../../styles/base.scss";
+
 #column-list {
-  padding-left: 0;
+  padding: 50px 0;
   list-style: none;
   overflow-x: auto;
   overflow-y: hidden;
   white-space: nowrap;
   height: auto;
-}
-#column-empty-list {
-  text-align: center;
-  img {
-    width: 300px;
-    filter: grayscale(1);
-  }
 }

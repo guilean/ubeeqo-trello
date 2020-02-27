@@ -8,6 +8,8 @@
   background: #005258d9;
   color: white;
   position: relative;
+  display: flex;
+  align-items: center;
   cursor: inherit;
   .task-name {
     width: calc(100% - 14px);

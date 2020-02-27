@@ -27,7 +27,7 @@ function ColumnsContainer() {
     [boardId, dispatch]
   );
 
-  const reorderColumns = useCallback(
+  const reorderColumn = useCallback(
     reorderedColumns =>
       dispatch(reorderColumnAction({ boardId, reorderedColumns })),
     [boardId, dispatch]
@@ -38,7 +38,7 @@ function ColumnsContainer() {
       <div className="container">
         <ColumnCreator createColumn={createColumn} />
         <ColumnList
-          reorderColumns={reorderColumns}
+          reorderColumn={reorderColumn}
           deleteColumn={deleteColumn}
           data={columns}
         />
